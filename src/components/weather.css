@@ -1,0 +1,130 @@
+.weather-display {
+    padding: 10%;
+    height: 400px;
+}
+
+.weather-title {
+    vertical-align: middle;
+    position: relative;
+}
+
+.weather-top { 
+    height: 150px;
+    position: relative;
+    margin-top: 15px;
+
+    background-position: center;
+    background-size: 300px;
+
+    z-index: 15;
+}
+
+.temperature {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+
+    padding: 5px;
+
+    background-color: white;
+    border-radius: 15px;
+}
+
+.weather-bottom {
+    position: relative;
+}
+
+.weather-body > div {
+    width: 60%;
+    margin:auto;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.weather-body > div > * {
+    vertical-align: middle;
+}
+
+.weather-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+/* Navigation Menu */
+
+#burger-menu {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+
+    width: 0px;
+    height: 0px;
+
+    z-index: 30;
+}
+
+#burger-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#burger-icon:hover {
+    background-color: grey;
+}
+
+#nav-menu {
+    position: absolute;
+    right: -20px;
+    top: 0;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: 1px solid black;
+
+    background-color: white;
+}
+
+#nav-options {
+    width: 200px;
+}
+
+.nav-option {
+    padding: 10px;
+    height: 20px;
+    
+    text-decoration: none;
+
+    border-bottom:1px solid black;
+
+    transition: all 0.2s ease;
+}
+
+.nav-option:hover {
+    background: rgb(165, 165, 165);
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#nav-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    font-weight: bold;
+
+    padding: 10px;
+    font-size: 16px;
+}
+
+#nav-close:hover {
+    background: rgb(165, 165, 165);
+    cursor: pointer;
+    color: #fff;
+}
