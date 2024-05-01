@@ -17,7 +17,7 @@ interface LoginState {
 }
 
 const correctUser: string = "Cambridge";
-let correctPass: string = "";
+let correctPass: string = "cambridge";
 
 /**
  * Login: 
@@ -76,7 +76,7 @@ export default class Login extends React.Component<LoginProps, LoginState> {
         }
     }
     handleSubmit() {
-        const hashedPassword = this.encryptPassword(this.state.password);
+        const hashedPassword = bcrpyt.hashSync(this.state.password, 10);
         bcrpyt.compare(correctPass, hashedPassword, (err, result) => {
             if (result && this.state.username === correctUser) {
                 this.setState({
@@ -91,12 +91,5 @@ export default class Login extends React.Component<LoginProps, LoginState> {
                 })
             }
         });
-    }
-
-    encryptPassword(password: string): string {
-        const saltRounds: number = 0;
-        let hashedPassword: string = bcrpyt.hashSync(password, saltRounds);
-
-        return hashedPassword;
     }
 }
